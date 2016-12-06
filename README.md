@@ -30,7 +30,14 @@ Also when:
 
 ### Useful commands
 
-- `git commit --amend`
+- `git commit --amend` **!!!!!**
+
+### Configure the lab branch
+
+```
+git checkout git-commit-amend
+git apply changes.patch
+```
 
 ## When your changes aren't ready to commit, but someone else's need to be merged in
 
@@ -101,7 +108,7 @@ git checkout git-history
 
 ### Useful commands
 
-- `git reset --hard`
+- `git reset --hard` **!!!!!**
 
 # Making real life use of history
 
