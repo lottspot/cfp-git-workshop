@@ -98,6 +98,12 @@ git branch -D git-conflicts
 git checkout git-history
 ```
 
+## When you accidentally deleted a file, or you want an older copy of a file
+
+### Useful commands
+
+- `git checkout`
+
 ## When something changed, everything exploded, and you need to go back to happier times
 
 ### Useful commands
