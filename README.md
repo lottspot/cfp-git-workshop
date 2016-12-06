@@ -13,7 +13,7 @@ The closer you adhere to these guidelines, the more useful your history will be:
 
 ### Useful commands
 
-- `git add -p`
+- `git add -p $FILE_PATH`
 
 ### Configure the lab branch
 
@@ -81,40 +81,77 @@ git branch -D git-conflicts
 
 # Making use of history
 
-## When you want to inspect all changes ever
-
-### Useful commands
-
-- `git log`
-- `git log --pretty=oneline`
-- `git log -p`
-- `git show`
-- `git grep`
-- `git blame`
-
-### Open the lab branch
+## The lab branch
 
 ```
 git checkout git-history
 ```
 
-## When you accidentally deleted a file, or you want an older copy of a file
+## When you just want to see previous commit messages
 
 ### Useful commands
 
-- `git checkout`
+- `git log`
+- `git log -$NUM`
+- `git log --pretty=oneline`
+
+## When you want to look at both the commit message and the changes it introduced
+
+### Useful commands
+
+- `git show $COMMIT`
+- `git log -p`
+
+## When you only want to look at commits in a certain date range
+
+### Useful commands
+
+- `git log --after=$DATE`
+- `git log --before=$DATE`
+
+## When you want to find commits based on the contents of the commit message
+
+### Useful commands
+
+- `git log --grep=$SEARCH_PATTERN`
+
+## When you want to find the commit that changed a particular line of a particular file
+
+### Useful commands
+
+- `git blame $FILE_PATH`
+
+## When you want to view the full contents of a historical file
+
+### Useful commands
+
+- `git show $COMMIT:$FILE_PATH`
+
+## When you want to search the contents of historical files
+
+### Useful commands
+
+- `git grep $SEARCH_PATTERN $COMMIT`
+- `git grep $SEARCH_PATTERN $(git rev-list --all)`
+- `git grep $SEARCH_PATTERN $COMMIT_1 $COMMIT_2 $FILE_PATH_1 $FILE_PATH_2`
+
+## When you accidentally deleted a file, or you want to work from an older copy of a file
+
+### Useful commands
+
+- `git checkout $COMMIT $FILE_PATH`
 
 ## When something changed, everything exploded, and you need to go back to happier times
 
 ### Useful commands
 
-- `git revert`
+- `git revert $COMMIT`
 
 ## When you're feeling particularly courageous (see synonym: foolish) and you want to do things that can never be undone
 
 ### Useful commands
 
-- `git reset --hard` **!!!!!**
+- `git reset --hard $COMMIT` **!!!!!**
 
 # Making real life use of history
 
