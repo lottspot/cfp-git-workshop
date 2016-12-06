@@ -1,0 +1,7 @@
+NEED BRANCHES:
+  - git-add-p
+  - git-commit-amend
+  - git-stash
+  - conflict-path-a
+  - conflict-path-b
+  - git-history
